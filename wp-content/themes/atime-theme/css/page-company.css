@@ -1,0 +1,186 @@
+/* =================================================================
+   Company Page Styles
+   - Updated with enhanced animations and refined design.
+================================================================= */
+
+/* --- Hero Section --- */
+.company-hero {
+    background: #1a202c; /* Fallback bg */
+}
+
+/* --- General Section & Card Animation --- */
+.company-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.company-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #1a202c;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.section-subtitle {
+    display: block;
+    font-size: 1.125rem; /* 18px */
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+}
+
+/* --- Business Model & Mission Cards --- */
+.company-card {
+    background-color: #ffffff;
+    border-radius: 1rem; /* 16px */
+    box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s, box-shadow 0.4s ease;
+}
+
+.company-section.is-visible .company-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.company-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+}
+
+.company-card p {
+    line-height: 1.8;
+    color: #4b5563; /* Cool Gray 600 */
+}
+
+.company-image-wrapper {
+    perspective: 1000px;
+}
+.company-image-wrapper img {
+    transition: transform 0.5s ease-out;
+}
+.company-section.is-visible .company-image-wrapper img {
+     transform: rotateY(-5deg) rotateX(3deg);
+}
+
+/* --- Company Profile Section (Image-based Design) --- */
+.profile-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; /* 48px */
+    font-weight: 700;
+    color: #1a202c;
+    letter-spacing: 0.05em;
+}
+
+.profile-sub-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.125rem; /* 18px */
+    color: #4b5563; /* Cool Gray 600 */
+    margin-top: 0.25rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.75rem;
+}
+
+.profile-sub-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.profile-card-wrapper {
+    max-width: 64rem; /* Assuming 4xl corresponds to 64rem */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 1.5rem; /* 24px */
+    padding: 2rem 1.5rem; /* 32px 24px */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid var(--primary-color);
+}
+
+.profile-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-item {
+    display: flex;
+    flex-direction: column; /* Mobile first */
+    padding: 1.25rem 0.5rem; /* 20px 8px */
+    border-bottom: 1px solid #e5e7eb; /* Cool Gray 200 */
+}
+
+.profile-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0.5rem;
+}
+
+.profile-item dt {
+    font-weight: 700;
+    color: #374151; /* Cool Gray 700 */
+    flex-shrink: 0;
+    margin-bottom: 0.5rem; /* Space between label and value on mobile */
+    font-size: 1rem; /* 16px */
+}
+
+.profile-item dd {
+    color: #4b5563; /* Cool Gray 600 */
+    line-height: 1.7;
+    font-size: 1rem; /* 16px */
+}
+
+.profile-item dd ul {
+    padding-left: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .profile-card {
+        padding: 3rem 4rem; /* 48px 64px */
+    }
+
+    .profile-item {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1.5rem 1rem; /* 24px 16px */
+    }
+
+    .profile-item dt {
+        width: 10rem; /* 160px */
+        margin-bottom: 0;
+        padding-top: 0.125rem;
+    }
+}
+
+/* --- General Animations --- */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpAnimation 1s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+@keyframes fadeInUpAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

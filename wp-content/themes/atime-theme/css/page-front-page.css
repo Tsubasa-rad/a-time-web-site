@@ -1,0 +1,216 @@
+/* =================================================================
+   Front Page Styles
+   - Includes hero slideshow and service card styles.
+================================================================= */
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+#slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    will-change: opacity;
+}
+.slide.active {
+    opacity: 1;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* --- Services Section --- */
+#services .service-card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem 0 1rem 0; /* 右上と左下を角張らせる */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.2); /* 背景のぼかし効果として影を適用 */
+}
+
+#services .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -20px rgba(0, 0, 0, 0.3); /* ホバー時の影を強調 */
+}
+
+#services .service-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 1rem;
+}
+
+#services .service-number {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--primary-color);
+    border-right: 1px solid #e5e7eb;
+    padding-right: 1.5rem;
+}
+
+#services .service-number .font-sans {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+#services .service-number .font-serif {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#services .service-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+#services .service-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#services .service-image {
+    border-radius: 1rem; /* 画像の角を均等に丸くする */
+    overflow: hidden;
+    max-height: 250px; /* 画像の高さを少し大きくする */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#services .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#services .service-description p {
+    color: #374151;
+    line-height: 1.8;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* --- Grid container for desktop --- */
+#services .services-slider.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* --- Mobile Slider for Services --- */
+#services .slider-pagination {
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+    #services .services-slider.grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; /* カード間のスペース */
+    }
+    
+    #services .services-slider-container {
+        cursor: pointer;
+    }
+
+    #services .service-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        margin: 0 5%;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        visibility: hidden;
+    }
+
+    #services .service-card.active {
+        position: relative; 
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #services .slider-pagination {
+        display: none;
+    }
+
+    #services .pagination-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #d1d5db;
+        transition: background-color 0.3s ease;
+    }
+
+    #services .pagination-dot.active {
+        background-color: var(--primary-color);
+    }
+}
+
+/* --- Scroll Indicator --- */
+#scroll-indicator {
+    animation: bounce-animation 2.5s infinite ease-in-out, fadeIn 1s 1s ease-in forwards;
+    opacity: 0;
+    transition: transform 0.3s ease; /* ホバー時の動きを滑らかに */
+}
+
+/* ホバー時に少し上に移動させる */
+#scroll-indicator:hover {
+    transform: translate(-50%, -10px);
+    animation-play-state: paused; /* ホバー中はバウンドを一時停止 */
+}
+
+/* 上下にバウンドするアニメーション */
+@keyframes bounce-animation {
+  0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+  40% { transform: translate(-50%, -10px); }
+  60% { transform: translate(-50%, -5px); }
+}
+
+/* フェードイン用のアニメーション */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

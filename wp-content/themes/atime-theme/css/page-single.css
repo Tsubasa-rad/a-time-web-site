@@ -1,0 +1,56 @@
+/* Styles for single post page (single.php) */
+
+/* Styles for content rendered from WordPress editor */
+.prose h2 {
+    font-size: 1.5em; /* 24px */
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+.prose h3 {
+    font-size: 1.25em; /* 20px */
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+.prose p {
+    line-height: 1.75;
+    margin-bottom: 1.25em;
+}
+.prose ul, .prose ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.25em;
+}
+.prose ul {
+    list-style-type: disc;
+}
+.prose ol {
+    list-style-type: decimal;
+}
+.prose li {
+    margin-bottom: 0.5em;
+}
+.prose a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.prose strong {
+    font-weight: 700;
+}
+.prose blockquote {
+    border-left: 4px solid #e5e7eb;
+    padding-left: 1em;
+    font-style: italic;
+    color: #6b7280;
+}
+
+/* Sidebar scrollbar utility */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
