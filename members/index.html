@@ -57,15 +57,15 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <body class="wp-singular page-template page-template-page-members page-template-page-members-php page page-id-8 wp-theme-atime-theme bg-gray-50 text-gray-800">
 <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <!-- <div class="site-logo">
-            <a href="https://tsubasa-rad.github.io/a-time-web-site/" class="flex flex-col items-start">
-                <span class="logo-line"></span>
-                <span class="logo-text">a-time</span>
+        <!-- <div class="h-8"> 
+            <a href="https://tsubasa-rad.github.io/a-time-web-site/">
+                <img src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/a-time.png" alt="a-time logo" class="h-full w-50">
             </a>
         </div> -->
+
         <div class="h-8"> 
             <a href="https://tsubasa-rad.github.io/a-time-web-site/">
-                <img src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/a-time.png" alt="a-time logo" class="h-full w-35">
+                <img id="site-logo-img" src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/a-time-black.png" data-white-src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/a-time-white.png" data-black-src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/a-time-black.png" alt="a-time logo" class="h-full w-50 transition-opacity duration-300">
             </a>
         </div>
 
@@ -90,119 +90,138 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
         <a href="https://tsubasa-rad.github.io/a-time-web-site/contact#contact" class="block text-primary font-bold text-center py-4 hover:bg-gray-100 transition">お問い合わせ</a>
     </div>
 </header>
-<!-- Member Tab Bar (Fixed & Transparent Container) -->
-<div id="member-tabs" class="fixed w-full top-0 pt-6 px-4 z-30">
-	<div class="max-w-6xl mx-auto flex items-center justify-center space-x-2 overflow-x-auto whitespace-nowrap">
-					<a href="#member-12" data-target="#member-12" class="member-tab-btn inline-block px-4 py-2 rounded-full text-sm font-semibold border border-transparent transition-colors duration-300">
-				<span class="block text-center">廣田 健人</span>
-				<span class="block text-xs opacity-75 text-center">共同代表取締役 CEO</span>
-			</a>
-					<a href="#member-15" data-target="#member-15" class="member-tab-btn inline-block px-4 py-2 rounded-full text-sm font-semibold border border-transparent transition-colors duration-300">
-				<span class="block text-center">松村卓和</span>
-				<span class="block text-xs opacity-75 text-center">共同代表取締役 CEO</span>
-			</a>
-			</div>
-</div>
-
-
 <div class="members-snap-container h-screen overflow-y-scroll snap-y snap-mandatory relative">
     <main>
-                <!-- Member Card Section -->
-        <section id="member-12" class="member-section snap-start w-full h-screen px-4 py-16 md:p-0 flex items-center justify-center" style="background-image: url('https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/6.jpg');">
+                <section id="member-12" class="member-section snap-start w-full h-screen px-4 pt-24 pb-16 md:p-0 flex items-center justify-center" style="background-image: url('https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/6.jpg');">
             <div class="member-card w-full max-w-6xl md:h-[80vh] flex flex-col md:flex-row mx-auto">
-                <div class="w-full md:w-5/12 h-64 md:h-full member-image-container">
+                <div class="w-full md:w-5/12 h-72 md:h-full member-image-container">
                     <div class="member-bg" style="background-image: url('https://tsubasa-rad.github.io/a-time-web-site/wp-content/uploads/2025/09/2-1024x682.jpg');"></div>
                 </div>
                 <div class="w-full md:w-7/12 flex-grow p-6 sm:p-8 md:p-12 flex items-center justify-center overflow-y-auto">
                     <div class="max-w-md w-full reveal-content">
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif-display text-gray-800">廣田 健人</h2>
-                                                    <p class="text-primary font-semibold text-xl lg:text-2xl mt-2 mb-4">共同代表取締役 CEO</p>
-                                                                            <p class="text-base lg:text-lg text-gray-600 mb-6 border-b border-gray-300 pb-4">東京大学農学部 応用生命科学課程 4年</p>
-                                                <div class="space-y-6 text-gray-700">
+
+                        <div class="flex items-baseline flex-wrap mb-1">
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-serif-display text-gray-800">廣田 健人</h2>
+                                                            <p class="text-primary font-semibold text-lg sm:text-xl lg:text-2xl ml-3">共同代表取締役 CEO</p>
+                                                    </div>
+                                                    <p class="text-base lg:text-lg text-gray-600 mb-4 border-b border-gray-300 pb-4">東京大学農学部 応用生命科学課程 4年</p>
+                        
+                        <div class="space-y-4 text-sm sm:text-base text-gray-700">
                                                         <div class="flex items-start">
-                                <div><strong class="font-bold text-gray-800">ビジョン:</strong>
-                                    <ul class="list-disc list-inside ml-4 mt-1">
-                                        <li>テクノロジーで、才能の最適なマッチングを実現する。</li>                                    </ul>
+                                <div>
+                                    <strong class="font-bold text-gray-800">担当領域: </strong>
+                                    <span>テクノロジーで、才能の最適なマッチングを実現する。</span>
                                 </div>
                             </div>
-                            							                             <div class="flex items-start">
-                                <div><strong class="font-bold text-gray-800">特技:</strong>
-                                    <ul class="list-disc list-inside ml-4 mt-1">
-                                        <li>複雑な問題を構造化し、本質的な解決策を導き出すこと。</li>                                    </ul>
+                                                                                    <div class="flex items-start">
+                                <div>
+                                    <strong class="font-bold text-gray-800">経歴: </strong>
+                                    <span>複雑な問題を構造化し、本質的な解決策を導き出すこと。</span>
                                 </div>
                             </div>
-                            							                        </div>
+                                                        <!--  -->
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-				        <!-- Member Card Section -->
-        <section id="member-15" class="member-section snap-start w-full h-screen px-4 py-16 md:p-0 flex items-center justify-center" style="background-image: url('https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/6.jpg');">
+				        <section id="member-15" class="member-section snap-start w-full h-screen px-4 pt-24 pb-16 md:p-0 flex items-center justify-center" style="background-image: url('https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/6.jpg');">
             <div class="member-card w-full max-w-6xl md:h-[80vh] flex flex-col md:flex-row mx-auto">
-                <div class="w-full md:w-5/12 h-64 md:h-full member-image-container">
+                <div class="w-full md:w-5/12 h-72 md:h-full member-image-container">
                     <div class="member-bg" style="background-image: url('https://tsubasa-rad.github.io/a-time-web-site/wp-content/uploads/2025/09/1-1024x678.jpg');"></div>
                 </div>
                 <div class="w-full md:w-7/12 flex-grow p-6 sm:p-8 md:p-12 flex items-center justify-center overflow-y-auto">
                     <div class="max-w-md w-full reveal-content">
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif-display text-gray-800">松村卓和</h2>
-                                                    <p class="text-primary font-semibold text-xl lg:text-2xl mt-2 mb-4">共同代表取締役 CEO</p>
-                                                                            <p class="text-base lg:text-lg text-gray-600 mb-6 border-b border-gray-300 pb-4">東京大学農学部 応用生命科学課程 4年</p>
-                                                <div class="space-y-6 text-gray-700">
-                                                        <div class="flex items-start">
-                                <div><strong class="font-bold text-gray-800">ビジョン:</strong>
-                                    <ul class="list-disc list-inside ml-4 mt-1">
-                                        <li>テクノロジーで、才能の最適なマッチングを実現する。</li>                                    </ul>
-                                </div>
-                            </div>
-                            							                             <div class="flex items-start">
-                                <div><strong class="font-bold text-gray-800">特技:</strong>
-                                    <ul class="list-disc list-inside ml-4 mt-1">
-                                        <li>テクノロジーで、才能の最適なマッチングを実現する。</li>                                    </ul>
-                                </div>
-                            </div>
-                            							                             <div class="flex items-start">
-                                <div><strong class="font-bold text-gray-800">趣味:</strong>
-                                    <ul class="list-disc list-inside ml-4 mt-1">
-                                        <li>テクノロジーで、才能の最適なマッチングを実現する。</li>                                    </ul>
-                                </div>
-                            </div>
+
+                        <div class="flex items-baseline flex-wrap mb-1">
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-serif-display text-gray-800">松村卓和</h2>
+                                                            <p class="text-primary font-semibold text-lg sm:text-xl lg:text-2xl ml-3">共同代表取締役 CEO</p>
                                                     </div>
+                                                    <p class="text-base lg:text-lg text-gray-600 mb-4 border-b border-gray-300 pb-4">東京大学農学部 応用生命科学課程 4年</p>
+                        
+                        <div class="space-y-4 text-sm sm:text-base text-gray-700">
+                                                        <div class="flex items-start">
+                                <div>
+                                    <strong class="font-bold text-gray-800">担当領域: </strong>
+                                    <span>テクノロジーで、才能の最適なマッチングを実現する。</span>
+                                </div>
+                            </div>
+                                                                                    <div class="flex items-start">
+                                <div>
+                                    <strong class="font-bold text-gray-800">経歴: </strong>
+                                    <span>テクノロジーで、才能の最適なマッチングを実現する。</span>
+                                </div>
+                            </div>
+                                                        <!--                             <div class="flex items-start">
+                                <div>
+                                    <strong class="font-bold text-gray-800">趣味: </strong>
+                                    <span>テクノロジーで、才能の最適なマッチングを実現する。</span>
+                                </div>
+                            </div>
+                             -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+				        <section id="member-58" class="member-section snap-start w-full h-screen px-4 pt-24 pb-16 md:p-0 flex items-center justify-center" style="background-image: url('https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/6.jpg');">
+            <div class="member-card w-full max-w-6xl md:h-[80vh] flex flex-col md:flex-row mx-auto">
+                <div class="w-full md:w-5/12 h-72 md:h-full member-image-container">
+                    <div class="member-bg" style="background-image: url('https://tsubasa-rad.github.io/a-time-web-site/wp-content/uploads/2025/10/IMG_2869-593x1024.jpg');"></div>
+                </div>
+                <div class="w-full md:w-7/12 flex-grow p-6 sm:p-8 md:p-12 flex items-center justify-center overflow-y-auto">
+                    <div class="max-w-md w-full reveal-content">
+
+                        <div class="flex items-baseline flex-wrap mb-1">
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-serif-display text-gray-800">小牧一希</h2>
+                                                            <p class="text-primary font-semibold text-lg sm:text-xl lg:text-2xl ml-3">執行役員</p>
+                                                    </div>
+                        
+                        <div class="space-y-4 text-sm sm:text-base text-gray-700">
+                                                        <div class="flex items-start">
+                                <div>
+                                    <strong class="font-bold text-gray-800">担当領域: </strong>
+                                    <span>プロダクトマネージャー、セールス</span>
+                                </div>
+                            </div>
+                                                                                    <div class="flex items-start">
+                                <div>
+                                    <strong class="font-bold text-gray-800">経歴: </strong>
+                                    <span>神戸高校総合理学科&rarr;東京大学理科二類&rarr;東京大学文学部美術史学専修に所属。学部4年生。教育系スタートアップにて経営企画職を経験後、2024年10月a-timeにジョイン。a-timeでは東大メディア公式サイトプロデュースや各種SNS運営、Gift Careerの立ち上げを行う</span>
+                                </div>
+                            </div>
+                                                        <!--  -->
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 				
-        <!-- Footer Section -->
         <section class="footer-section snap-start bg-gray-800">
             <footer id="footer" class="bg-gray-800 text-white w-full">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
             <div class="space-y-8 xl:col-span-1">
-                <div class="site-logo">
-                    <a href="https://tsubasa-rad.github.io/a-time-web-site/">
-                        <span class="logo-line"></span>
-                        <span class="logo-text">a-time</span>
-                    </a>
-                </div>
+            <div class="h-8"> 
+            <a href="https://tsubasa-rad.github.io/a-time-web-site/">
+                <img src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/assets/a-time-white.png" alt="a-time logo" class="h-full w-50">
+            </a>
+        </div>
                 <p class="text-gray-400 text-base">
                     東大生の知性を、新たな価値へ。
                 </p>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white">
+                    <a href="https://www.instagram.com/univ_tokyo_media?igsh=MTFscmQ0YzdpNXM4ZQ==" class="text-gray-400 hover:text-white">
                         <span class="sr-only">Instagram</span>
                         <i class="fab fa-instagram text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
+                    <a href="https://line.me/R/ti/p/@192grpmj?oat_content=url" class="text-gray-400 hover:text-white">
                         <span class="sr-only">Official LINE</span>
                         <i class="fab fa-line text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
+                    <a href="https://x.com/todai_media?s=21" class="text-gray-400 hover:text-white">
                         <span class="sr-only">X</span>
                         <p>X</p>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <span class="sr-only">OpenChat</span>
-                        <i class="fas fa-comments text-xl"></i>
                     </a>
                 </div>
             </div>
@@ -279,15 +298,36 @@ var wpcf7 = {
 <script src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.1" id="contact-form-7-js"></script>
 <script src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/js/global.js?ver=1.1.0" id="atime-global-script-js"></script>
 <script src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/js/page-members.js?ver=1.1.0" id="atime-members-script-js"></script>
+<script src="https://tsubasa-rad.github.io/a-time-web-site/wp-content/themes/atime-theme/js/main.js?ver=1.0.0" id="a-time-main-script-js"></script>
 
 </section></main></div></body>
-</html><html><button id="scroll-down-btn" class="fixed bottom-8 right-8 z-50 text-white w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg opacity-0 pointer-events-none">
-    <i id="scroll-btn-icon" class="fas fa-chevron-down text-2xl"></i>
+</html><html><div id="member-select-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-sm p-6 text-center">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">メンバーを選択</h3>
+        <div class="space-y-3">
+                            <a href="#member-12" data-target="#member-12" class="modal-member-link block w-full px-4 py-3 rounded-lg bg-gray-100 hover:bg-primary hover:text-white transition-colors duration-300">
+                    <span class="block font-semibold">廣田 健人</span>
+                    <span class="block text-sm opacity-75">共同代表取締役 CEO</span>
+                </a>
+                            <a href="#member-15" data-target="#member-15" class="modal-member-link block w-full px-4 py-3 rounded-lg bg-gray-100 hover:bg-primary hover:text-white transition-colors duration-300">
+                    <span class="block font-semibold">松村卓和</span>
+                    <span class="block text-sm opacity-75">共同代表取締役 CEO</span>
+                </a>
+                            <a href="#member-58" data-target="#member-58" class="modal-member-link block w-full px-4 py-3 rounded-lg bg-gray-100 hover:bg-primary hover:text-white transition-colors duration-300">
+                    <span class="block font-semibold">小牧一希</span>
+                    <span class="block text-sm opacity-75">執行役員</span>
+                </a>
+                    </div>
+        <button id="modal-close-btn" class="mt-6 text-gray-500 hover:text-gray-800 text-sm font-semibold">閉じる</button>
+    </div>
+</div>
+
+
+<button id="open-member-modal-btn" class="fixed bottom-8 right-8 z-40 text-white w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg">
+    <i class="fas fa-users text-2xl"></i>
 </button>
 
 <div id="scroll-indicator" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 text-gray-500 hidden md:flex flex-col items-center space-y-2 opacity-0 transition-opacity duration-500">
     <span class="font-bold text-sm tracking-widest">SCROLL</span>
     <i class="fas fa-chevron-down"></i>
-</div>
-
-</html>
+</div></html>

@@ -1,6 +1,6 @@
 /*
 Theme Name: a-time Theme
-Author: Your Name
+Author: a-time
 Description: a-timeの公式ウェブサイト用カスタムテーマ
 Version: 1.1.0
 */
@@ -100,7 +100,7 @@ body {
     transition: background-color 0.3s ease;
 }
 .site-logo .logo-text {
-    font-family: "Helvetica Neue Black", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Anton', sans-serif; /* ← ここを変更 */
     font-size: 35px;
     font-weight: 600;
     line-height: 1;
@@ -154,10 +154,6 @@ body {
     color: white; /* テキストを白色に */
 }
 /* --- メンバーページのヘッダー固定スタイル --- */
-/*
-  .page-template-page-members という、メンバーページだけに付与される
-  ユニークなクラスを利用して、ヘッダースタイルを上書きします。
-*/
 .page-template-page-members #navbar,
 .page-template-page-members #navbar.scrolled {
     background-color: white !important; /* 背景を常に白に */
@@ -185,4 +181,3 @@ body {
 .page-template-page-members #navbar #mobile-menu-button {
     color: #1a202c !important; /* ハンバーガーメニューを黒に */
 }
-
