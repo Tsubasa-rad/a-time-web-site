@@ -1,4 +1,4 @@
-/* Styles for the members page (page-members.php) */
+
 
 body.page-template-page-members,
 body.page-template-page-members html {
@@ -16,7 +16,6 @@ body.page-template-page-members html {
     scroll-snap-align: start;
 }
 
-/* --- Member Section Background & Overlay --- */
 .member-section {
     position: relative;
     background-size: cover;
@@ -35,7 +34,6 @@ body.page-template-page-members html {
 }
 
 
-/* --- Member Card Styles --- */
 .member-card {
     position: relative;
     z-index: 1;
@@ -92,20 +90,17 @@ body.page-template-page-members html {
   60% { transform: translate(-50%, -5px); }
 }
 
-/* --- Modal Styles --- */
 body.modal-open {
     overflow: hidden;
 }
 
 #member-select-modal {
-    /* Initial state: hidden */
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.3s, opacity 0.3s ease-out;
 }
 
 #member-select-modal.is-visible {
-    /* Visible state */
     visibility: visible;
     opacity: 1;
     transition: visibility 0s, opacity 0.3s ease-out;
